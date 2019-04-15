@@ -20,7 +20,7 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
         ifs>>id; if(ifs.fail()) throw std::runtime_error("Probleme lecture données sommet");
         ifs>>x; if(ifs.fail()) throw std::runtime_error("Probleme lecture données sommet");
         ifs>>y; if(ifs.fail()) throw std::runtime_error("Probleme lecture données sommet");
-        //m_sommets.insert({id,new Sommet{id,x,y}});
+        m_sommets.insert({id,new Sommet{id,x,y}});
     }
 
     int taille; //nb aretes
@@ -34,7 +34,7 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
         ifs>>id; if(ifs.fail()) throw std::runtime_error("Probleme lecture arete ID");
         ifs>>ID_s1; if(ifs.fail()) throw std::runtime_error("Probleme lecture arete sommet 2");
         ifs>>ID_s2; if(ifs.fail()) throw std::runtime_error("Probleme lecture arete sommet 2");
-        //m_arete.insert({new Arete{id,m_sommets.find(ID_s1)->second,m_sommets.find(ID_s2)->second} });
+        m_arete.insert({new Arete{id,m_sommets.find(ID_s1)->second,m_sommets.find(ID_s2)->second} });
     }
 
     ///Ouverture FICHIER POIDS///////////////////////:
@@ -55,8 +55,8 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
         ifs2 >> id; if(ifs2.fail()) throw std::runtime_error("Probleme lecture arete ID Fichier 2");
         ifs2 >> pond1; if(ifs2.fail()) throw std::runtime_error("Probleme lecture ponderation 1 arete Fichier 2");
         ifs2 >> pond2; if(ifs2.fail()) throw std::runtime_error("Probleme lecture ponderation 2 arete Fichier 2");
-        //m_arete.find(id)->setCoutFinancier(pond1);
-        //m_arete.find(id)->setCoutEnvironnement(pond2);
+        m_arete.find(id)->setCoutFinancier(pond1);
+        m_arete.find(id)->setCoutEnvironnement(pond2);
     }
 }
 

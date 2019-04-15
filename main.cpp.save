@@ -1,5 +1,7 @@
 #include <iostream>
-#include "std/objet/graphe.h"
+#ic
+
+using namespace std;
 
 int main()
 {

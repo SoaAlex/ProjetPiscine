@@ -2,7 +2,7 @@
 #define GRAPHE_H_INCLUDED
 
 #include "sommet.h"
-#include "arete.h"
+#include "arretes.h"
 
 class Graphe
 {
@@ -17,7 +17,7 @@ class Graphe
     protected:
         /// Le réseau est constitué d'une collection de sommets
         std::unordered_map<std::string,Sommet*> m_sommets;//stockée dans une map (clé=id du sommet, valeur= pointeur sur le sommet)
-}
+};
 
 //class Combinaison :
 

@@ -5,7 +5,7 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
-#include "ressource/svg/svgfile.h"
+//#include "ressource/svg/svgfile.h"
 
 class Arete{
 
@@ -21,6 +21,6 @@ class Arete{
         std::string m_idSommet1, m_idSommet2;
         int m_coutFinancier, m_coutEnvironnement;
         bool cyclable;
-}
+};
 
 #endif // ARRETES_H_INCLUDED
