@@ -14,6 +14,8 @@ class Graphe
         ~Graphe();
         //testAfficher();
 
+        std::vector<Arete*> doublePonderation();
+
     protected:
         /// Le réseau est constitué d'une collection de sommets
         std::unordered_map<std::string,Sommet*> m_sommets;//stockée dans une map (clé=id du sommet, valeur= pointeur sur le sommet)
