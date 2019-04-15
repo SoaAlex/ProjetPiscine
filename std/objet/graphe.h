@@ -19,4 +19,13 @@ class Graphe
         std::unordered_map<std::string,Sommet*> m_sommets;//stockée dans une map (clé=id du sommet, valeur= pointeur sur le sommet)
 }
 
+class Combinaison : public Graphe
+{
+public:
+
+private:
+    float m_coûtTotalFinancier, m_coûtTotalEnvironnement;
+    bool m_eliminer;
+};
+
 #endif // GRAPHE_H_INCLUDED
