@@ -6,6 +6,11 @@ Sommet::Sommet(std::string id,double x,double y)
     :m_id{id}, m_x{x}, m_y{y}
 { }
 
+void Sommet::setArete(Arete* arete)
+{
+    m_aretes.push_back(arete);
+}
+
 Sommet::~Sommet()
 {
     //dtor

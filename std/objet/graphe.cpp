@@ -20,7 +20,7 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
         ifs>>id; if(ifs.fail()) throw std::runtime_error("Probleme lecture données sommet");
         ifs>>x; if(ifs.fail()) throw std::runtime_error("Probleme lecture données sommet");
         ifs>>y; if(ifs.fail()) throw std::runtime_error("Probleme lecture données sommet");
-        //m_sommets.insert({id,new Sommet{id,x,y}});
+        m_sommets.insert({id,new Sommet{id,x,y}});
     }
 
     int taille; //nb aretes
@@ -29,24 +29,30 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
         throw std::runtime_error("Probleme lecture taille du graphe");
     std::string ID_s1, ID_s2;
 
+    Arete* arete;
     ///Lecture des aretes
     for (int i=0; i<taille; ++i){
         ifs>>id; if(ifs.fail()) throw std::runtime_error("Probleme lecture arete ID");
         ifs>>ID_s1; if(ifs.fail()) throw std::runtime_error("Probleme lecture arete sommet 2");
         ifs>>ID_s2; if(ifs.fail()) throw std::runtime_error("Probleme lecture arete sommet 2");
-        //m_arete.insert({new Arete{id,m_sommets.find(ID_s1)->second,m_sommets.find(ID_s2)->second} });
+        arete = new Arete{id,ID_s1, ID_s2};
+        m_sommets.find(ID_s1)->second->setArete(arete);
+        m_sommets.find(ID_s2)->second->setArete(arete);
+        m_aretes.insert({id,arete});
     }
 
+
+
     ///Ouverture FICHIER POIDS///////////////////////:
-    std::ifstream ifs2;
+    std::ifstream ifs2{ficPoids};
     if (!ifs2)
         throw std::runtime_error( "Impossible d'ouvrir en lecture " + ficPoids );
 
     int nbPonderations = 0;
-    ifs >> taille;
+    ifs2 >> taille;
     if ( ifs2.fail() )
         throw std::runtime_error("Probleme lecture taille du graphe fichier ponderation");
-    ifs >> nbPonderations;
+    ifs2 >> nbPonderations;
     if ( ifs2.fail() )
         throw std::runtime_error("Probleme lecture nombre ponderations du graphe");
 
@@ -55,8 +61,8 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
         ifs2 >> id; if(ifs2.fail()) throw std::runtime_error("Probleme lecture arete ID Fichier 2");
         ifs2 >> pond1; if(ifs2.fail()) throw std::runtime_error("Probleme lecture ponderation 1 arete Fichier 2");
         ifs2 >> pond2; if(ifs2.fail()) throw std::runtime_error("Probleme lecture ponderation 2 arete Fichier 2");
-        //m_arete.find(id)->setCoutFinancier(pond1);
-        //m_arete.find(id)->setCoutEnvironnement(pond2);
+        m_aretes.find(id)->second->setCoutFinancier(pond1);
+        m_aretes.find(id)->second->setCoutEnvironnement(pond2);
     }
 }
 
