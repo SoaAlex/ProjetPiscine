@@ -1,7 +1,7 @@
 #ifndef SOMMET_H_INCLUDED
 #define SOMMET_H_INCLUDED
 
-#include "Arete.h"
+#include "arretes.h"
 
 class Sommet
 {

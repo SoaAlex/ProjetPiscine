@@ -1,0 +1,10 @@
+#include <iostream>
+#ic
+
+using namespace std;
+
+int main()
+{
+    Graphe graphe("manhattan.txt", "manhattan_weights_0.txt");
+    return 0;
+}
