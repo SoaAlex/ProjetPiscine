@@ -32,13 +32,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="arretes.cpp" />
-		<Unit filename="arretes.h" />
-		<Unit filename="graphe.cpp" />
-		<Unit filename="graphe.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="sommet.cpp" />
-		<Unit filename="sommet.h" />
+		<Unit filename="std/objet/arretes.cpp" />
+		<Unit filename="std/objet/arretes.h" />
+		<Unit filename="std/objet/graphe.cpp" />
+		<Unit filename="std/objet/graphe.h" />
+		<Unit filename="std/objet/sommet.cpp" />
+		<Unit filename="std/objet/sommet.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
