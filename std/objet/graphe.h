@@ -19,4 +19,6 @@ class Graphe
         std::unordered_map<std::string,Sommet*> m_sommets;//stockée dans une map (clé=id du sommet, valeur= pointeur sur le sommet)
 }
 
+//class Combinaison :
+
 #endif // GRAPHE_H_INCLUDED
