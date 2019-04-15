@@ -1,10 +1,9 @@
 #include <iostream>
-#ic
-
-using namespace std;
+#include "std/objet/graphe.h"
 
 int main()
 {
     Graphe graphe("manhattan.txt", "manhattan_weights_0.txt");
+    testAfficher();
     return 0;
 }

@@ -10,6 +10,12 @@ class Sommet
         Sommet(std::string id,double x,double y);
         ~Sommet();
         void setArete(Arete* arete);
+        std::string getID() const{
+            return m_id;
+        };
+        std::vector<Arete*> getAretes()const{
+            return m_aretes;
+        };
 
     private:
         /// Données spécifiques du sommet

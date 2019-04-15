@@ -66,6 +66,19 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
     }
 }
 
+void Graphe::testAfficher()
+{
+    std::cout << "SOMMETS: " << std::endl;
+    for(const auto s: m_sommets){
+        std::cout<< s.second->getID() << std::endl;
+    }
+
+    std::cout << "ARETES: " << std::endl;
+    for(const auto s: m_aretes){
+        std::cout<< s.second->getID() << "  " << s.second->getS1() << "  " << s.second->getS2() << std::endl;
+    }
+}
+
 Graphe::~Graphe()
 {
     //dtor

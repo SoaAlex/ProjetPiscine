@@ -12,7 +12,7 @@ class Graphe
         void affichage();
         Graphe(std::string ficTopologie, std::string ficPonderations);
         ~Graphe();
-        //testAfficher();
+        void testAfficher();
 
     protected:
         /// Le réseau est constitué d'une collection de sommets

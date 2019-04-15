@@ -40,19 +40,19 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
         m_sommets.find(ID_s2)->second->setArete(arete);
         m_aretes.insert({id,arete});
     }
-    
-    
+
+
 
     ///Ouverture FICHIER POIDS///////////////////////:
-    std::ifstream ifs2;
+    std::ifstream ifs2{ficPoids};
     if (!ifs2)
         throw std::runtime_error( "Impossible d'ouvrir en lecture " + ficPoids );
 
     int nbPonderations = 0;
-    ifs >> taille;
+    ifs2 >> taille;
     if ( ifs2.fail() )
         throw std::runtime_error("Probleme lecture taille du graphe fichier ponderation");
-    ifs >> nbPonderations;
+    ifs2 >> nbPonderations;
     if ( ifs2.fail() )
         throw std::runtime_error("Probleme lecture nombre ponderations du graphe");
 
@@ -63,6 +63,19 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
         ifs2 >> pond2; if(ifs2.fail()) throw std::runtime_error("Probleme lecture ponderation 2 arete Fichier 2");
         m_aretes.find(id)->second->setCoutFinancier(pond1);
         m_aretes.find(id)->second->setCoutEnvironnement(pond2);
+    }
+}
+
+void Graphe::testAfficher()
+{
+    std::cout << "SOMMETS: " << std::endl;
+    for(const auto s: m_sommets){
+        std::cout<< s.second->getID() << std::endl;
+    }
+    
+    std::cout << "ARETES: " << std::endl;
+    for(const auto s: m_aretes){
+        std::cout<< s.second->getID() << "  " << s.second->getS1() <<std::endl;
     }
 }
 

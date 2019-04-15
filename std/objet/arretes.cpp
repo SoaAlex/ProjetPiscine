@@ -14,6 +14,31 @@ void Arete::setCoutEnvironnement(float coutEnvironnement)
     m_coutEnvironnement = coutEnvironnement;
 }
 
+std::string Arete::getID() const
+{
+    return m_id;
+}
+
+std::string Arete::getS1() const
+{
+    return m_idSommet1;
+}
+
+std::string Arete::getS2() const
+{
+    return m_idSommet2;
+}
+
+float Arete::getCoutFinancier() const
+{
+    return m_coutFinancier;
+}
+
+float Arete::getCoutEnvironnement() const
+{
+    return m_coutEnvironnement;
+}
+
 Arete::~Arete()
 {
     //dtor
