@@ -94,7 +94,7 @@ Graphe::~Graphe()
 }
 
 ///MIKAEL
-std::vector<Arete*> Graphe::doublePonderation()
+std::unordered_set<Combinaison*> Graphe::doublePonderation()
 {
     ///Création tableau de combinaisons
     std::unordered_set<Combinaison*> sousGraphes;///Tableau des combinaisons
@@ -124,7 +124,7 @@ std::vector<Arete*> Graphe::doublePonderation()
             compteur = compteur + 1;
         }
         ///Création de la combinaison
-        sousGraphes.insert(new Combinaison{sommets, aretes, coutTotalFinancier, coutTotalEnvironnement, elimine});
+        sousGraphes.insert(new Combinaison{aretes, coutTotalFinancier, coutTotalEnvironnement, elimine});
         ///Variables BFS
         std::queue<Sommet*> file;
         std::unordered_set<Sommet*> marquage;
@@ -134,7 +134,7 @@ std::vector<Arete*> Graphe::doublePonderation()
         for(const auto comb: sousGraphes)
         {
             ///Compter nombre d'arêtes (doit être égal à n-1, n : sommets)
-            if(comb->getAretes().size() != (comb->getSommets().size() - 1))
+            if(comb->getAretes().size() != (m_sommets.size() - 1))
             {
                 sousGraphes.erase(comb);
             }

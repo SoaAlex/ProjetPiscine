@@ -4,17 +4,14 @@
 class Combinaison
 {
 public:
-    Combinaison(std::unordered_map<std::string,Sommet*> sommets, std::unordered_map<std::string, Arete*> aretes,
-                float cout1, float cout2, bool elimine)
-        :m_sommets{sommets}, m_aretes{aretes}, m_coutTotalFinancier{cout1}, m_coutTotalEnvironnement{cout2}, m_elimine{elimine} { }
+    Combinaison(std::unordered_map<std::string, Arete*> aretes, float cout1, float cout2, bool elimine)
+        :m_aretes{aretes}, m_coutTotalFinancier{cout1}, m_coutTotalEnvironnement{cout2}, m_elimine{elimine} { }
     ~Combinaison() { }
 
-    std::unordered_map<std::string, Sommet*> getSommets() {return(m_sommets);}
     std::unordered_map<std::string, Arete*> getAretes() {return(m_aretes);}
 
 
 private:
-    std::unordered_map<std::string,Sommet*> m_sommets;
     std::unordered_map<std::string, Arete*> m_aretes;
     float m_coutTotalFinancier;
     float m_coutTotalEnvironnement;

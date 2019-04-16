@@ -12,7 +12,11 @@ class Graphe
         Graphe(std::string ficTopologie, std::string ficPonderations);
         ~Graphe();
         void testAfficher();
-        std::vector<Arete*> doublePonderation();
+        
+        ///Prim
+        Combinaison_Prim();
+        ///Double pondération
+        std::unordered_set<Combinaison*> doublePonderation();
 
     protected:
         /// Le réseau est constitué d'une collection de sommets
