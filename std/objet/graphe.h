@@ -3,6 +3,7 @@
 
 #include "sommet.h"
 #include "arretes.h"
+#include "combinaison.h"
 
 class Graphe
 {
@@ -12,6 +13,7 @@ class Graphe
         ~Graphe();
         //void affichage();
         void testAfficher();
+        std::vector<Arete*> doublePonderation();
 
     protected:
         /// Le réseau est constitué d'une collection de sommets

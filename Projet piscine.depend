@@ -3,9 +3,10 @@
 	<iostream>
 	"std/objet/graphe.h"
 
-1555402854 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.h
+1555403411 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.h
 	"sommet.h"
 	"arretes.h"
+	"combinaison.h"
 
 1555348838 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.h
 	"arretes.h"
@@ -28,4 +29,11 @@
 	<unordered_map>
 	<unordered_set>
 	"sommet.h"
+
+1555403329 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\combinaison.h
+
+1555403176 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\combinaison.cpp
+
+1555399438 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\outils.cpp
+	<iostream>
 

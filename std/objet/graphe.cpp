@@ -1,6 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include "graphe.h"
+#include "../outils.h"
 
 Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (adapté)
     ///Ouverture FICHIER TOPOLOGIE/////////////////////////////////
@@ -82,6 +83,58 @@ void Graphe::testAfficher()
     for(const auto s: m_aretes){
         std::cout << "SOMMET: " << s.first << " CF: " << s.second->getCoutFinancier() << " CE: " << s.second->getCoutEnvironnement() << std::endl;
     }
+}
+
+///MIKAEL
+std::vector<Arete*> Graphe::doublePonderation()
+{
+    ///Création tableau de combinaisons
+    std::unordered_set<Combinaison*> sousGraphes;///Tableau des combinaisons
+
+    ///Création des combinaisons
+    int binaire[m_aretes.size()] = {0};///Tableau : nombre binaire
+    int nbr_comb = 2^m_aretes.size();///2^(nbr d'arête) = nbr de combinaisons
+
+    std::unordered_map<std::string,Sommet*> sommets = m_sommets;///Tableau des sommets des combinaisons
+    std::unordered_map<std::string,Arete*> aretes;///Tableau des arêtes (route cyclables) des combinaisons
+    float coutTotalFinancier = 0;
+    float coutTotalEnvironnement = 0;
+    bool elimine = false;///Dominée ou non dominée (diagramme de Pareto)
+
+    for(size_t i = 0; i < nbr_comb; ++i)
+    {
+        ///1ère étape
+            ///Compteur binaire
+        convertisseur_binaire(binaire, nbr_comb, m_aretes.size());
+        int compteur = 0;
+        for(const auto ar: m_aretes)
+        {
+            if(binaire[compteur] == 1)
+            {
+                aretes.insert(ar);
+            }
+            compteur = compteur + 1;
+        }
+        ///Création de la combinaison
+        sousGraphes.insert(new Combinaison{sommets, aretes, coutTotalFinancier, coutTotalEnvironnement, elimine});
+
+        ///2ème étape
+        for(const auto comb: sousGraphes)
+        {
+            ///Compter nombre d'arêtes (doit être égal à n-1, n : sommets)
+            if(comb->getNbrAretes() != (comb->getNbrSommets() - 1))
+            {
+                sousGraphes.erase(comb);
+            }
+            ///Vérifier connexité (BFS)
+            /*else if()
+            {
+                k
+            }*/
+        }
+    }
+
+    //return();
 }
 
 Graphe::~Graphe()
