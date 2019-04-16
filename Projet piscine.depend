@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1555348838 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\main.cpp
+	<iostream>
+	"std/objet/graphe.h"
+
+1555403411 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.h
+	"sommet.h"
+	"arretes.h"
+	"combinaison.h"
+
+1555348838 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.h
+	"arretes.h"
+
+1555348838 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\arretes.h
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+
+1555348838 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\arretes.cpp
+	"arretes.h"
+
+1555402869 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.cpp
+	<fstream>
+	<iostream>
+	"graphe.h"
+
+1555347798 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.cpp
+	<unordered_map>
+	<unordered_set>
+	"sommet.h"
+
+1555403329 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\combinaison.h
+
+1555403176 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\combinaison.cpp
+
+1555399438 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\outils.cpp
+	<iostream>
+
+1555348840 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\main.cpp
+	<iostream>
+	"std/objet/graphe.h"
+
+1555403412 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\graphe.h
+	"sommet.h"
+	"arretes.h"
+	"combinaison.h"
+
+1555348840 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\sommet.h
+	"arretes.h"
+
+1555348840 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\arretes.h
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+
+1555403330 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\combinaison.h
+
+1555348840 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\arretes.cpp
+	"arretes.h"
+
+1555403178 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\combinaison.cpp
+
+1555347800 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\sommet.cpp
+	<unordered_map>
+	<unordered_set>
+	"sommet.h"
+
+1555399438 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\outils.cpp
+	<iostream>
+

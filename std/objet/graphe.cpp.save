@@ -85,12 +85,6 @@ void Graphe::testAfficher()
     }
 }
 
-Graphe::~Graphe()
-{
-    //dtor
-}
-
-
 ///MIKAEL
 std::vector<Arete*> Graphe::doublePonderation()
 {
@@ -133,16 +127,17 @@ std::vector<Arete*> Graphe::doublePonderation()
                 sousGraphes.erase(comb);
             }
             ///Vérifier connexité (BFS)
-            /*else if()
+            else if()
             {
                 k
-            }*/
+            }
         }
-
-        ///3ème étape
-            ///Calcul des coûts totaux
-
     }
 
     //return();
+}
+
+Graphe::~Graphe()
+{
+    //dtor
 }

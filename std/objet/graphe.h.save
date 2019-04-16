@@ -3,7 +3,6 @@
 
 #include "sommet.h"
 #include "arretes.h"
-#include "combinaison.h"
 
 class Graphe
 {

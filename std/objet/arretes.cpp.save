@@ -36,7 +36,7 @@ float Arete::getCoutFinancier() const
 
 float Arete::getCoutEnvironnement() const
 {
-    return m_coutEnvironnement;
+    return m_coutE
 }
 
 Arete::~Arete()
