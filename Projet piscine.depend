@@ -3,21 +3,22 @@
 	<iostream>
 	"std/objet/graphe.h"
 
-<<<<<<< HEAD
-1555402854 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.h
+1555407147 D
+
+1555404982 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.h
 	"sommet.h"
 	"arretes.h"
-
-1555348838 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.h
-=======
-1555404982 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.h
 	"sommet.h"
 	"arretes.h"
 	"combinaison.h"
 
 1555409206 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.h
->>>>>>> ft_mikael
+
+1555410134 mikael
 	"arretes.h"
+	<unordered_map>
+	<unordered_set>
+	"sommet.h"
 
 1555348838 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\arretes.h
 	<string>
@@ -28,15 +29,10 @@
 1555348838 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\arretes.cpp
 	"arretes.h"
 
-<<<<<<< HEAD
-1555402869 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.cpp
+1555409980 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.cpp
 	<fstream>
 	<iostream>
 	"graphe.h"
-
-1555347798 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.cpp
-=======
-1555409980 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.cpp
 	<fstream>
 	<iostream>
 	"graphe.h"
@@ -44,13 +40,7 @@
 	<queue>
 
 1555407147 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.cpp
->>>>>>> ft_mikael
-	<unordered_map>
-	<unordered_set>
-	"sommet.h"
 
-<<<<<<< HEAD
-=======
 1555404982 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\combinaison.h
 
 1555403176 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\combinaison.cpp
@@ -93,4 +83,45 @@
 1555410134 source:f:\projetpiscine\std\outils.cpp
 	<iostream>
 
->>>>>>> ft_mikael
+1555348840 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\main.cpp
+	<iostream>
+	"std/objet/graphe.h"
+
+1555411336 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\graphe.h
+	"sommet.h"
+	"arretes.h"
+	"combinaison.h"
+
+1555411336 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\sommet.h
+	"arretes.h"
+
+1555348840 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\arretes.h
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+
+1555411032 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\combinaison.h
+
+1555348840 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\arretes.cpp
+	"arretes.h"
+
+1555411032 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\combinaison.cpp
+
+1555411336 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\graphe.cpp
+	<fstream>
+	<iostream>
+	"graphe.h"
+	"../outils.h"
+	<queue>
+
+1555411032 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\outils.h
+
+1555411149 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\sommet.cpp
+	<unordered_map>
+	<unordered_set>
+	"sommet.h"
+
+1555411032 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\outils.cpp
+	<iostream>
+
