@@ -2,6 +2,7 @@
 #include <iostream>
 #include "graphe.h"
 #include "../outils.h"
+#include <queue>
 
 Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (adapté)
     ///Ouverture FICHIER TOPOLOGIE/////////////////////////////////
@@ -40,6 +41,8 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
         m_sommets.find(ID_s1)->second->setArete(arete);
         m_sommets.find(ID_s2)->second->setArete(arete);
         m_aretes.insert({id,arete});
+        m_sommets.find(ID_s1)->second->ajouterVoisin(ID_s2);
+        m_sommets.find(ID_s2)->second->ajouterVoisin(ID_s1);
     }
 
 
@@ -85,6 +88,11 @@ void Graphe::testAfficher()
     }
 }
 
+Graphe::~Graphe()
+{
+    //dtor
+}
+
 ///MIKAEL
 std::vector<Arete*> Graphe::doublePonderation()
 {
@@ -101,7 +109,7 @@ std::vector<Arete*> Graphe::doublePonderation()
     float coutTotalEnvironnement = 0;
     bool elimine = false;///Dominée ou non dominée (diagramme de Pareto)
 
-    for(size_t i = 0; i < nbr_comb; ++i)
+    for(int i = 0; i < nbr_comb; ++i)
     {
         ///1ère étape
             ///Compteur binaire
@@ -117,27 +125,44 @@ std::vector<Arete*> Graphe::doublePonderation()
         }
         ///Création de la combinaison
         sousGraphes.insert(new Combinaison{sommets, aretes, coutTotalFinancier, coutTotalEnvironnement, elimine});
+        ///Variables BFS
+        std::queue<Sommet*> file;
+        std::unordered_set<Sommet*> marquage;
+        Sommet* sommetActuel;
 
         ///2ème étape
         for(const auto comb: sousGraphes)
         {
             ///Compter nombre d'arêtes (doit être égal à n-1, n : sommets)
-            if(comb->getNbrAretes() != (comb->getNbrSommets() - 1))
+            if(comb->getAretes().size() != (comb->getSommets().size() - 1))
             {
                 sousGraphes.erase(comb);
             }
             ///Vérifier connexité (BFS)
-            /*else if()
+            else
             {
-                k
-            }*/
+                std::string s0 = "0"; //Commence au sommet 0 arbitrairement
+                sommetActuel = m_sommets.find(s0)->second;
+                marquage.insert(sommetActuel);
+                file.push(sommetActuel);
+
+                do{
+                    sommetActuel = file.front();
+                    file.pop();
+                    for(auto suc: sommetActuel->getVoisins() ){
+                        if(marquage.find(m_sommets.find(suc)->second) == marquage.end()){
+                            file.push(m_sommets.find(suc)->second);
+                            marquage.insert(m_sommets.find(suc)->second);
+                        }
+                    }
+                }while(!file.empty());
+                if(marquage.size() != m_sommets.size()){///Si non connexe
+                    sousGraphes.erase(comb);
+                }
+            }
         }
     }
 
     //return();
 }
 
-Graphe::~Graphe()
-{
-    //dtor
-}

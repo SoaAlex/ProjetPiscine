@@ -3,12 +3,12 @@
 	<iostream>
 	"std/objet/graphe.h"
 
-1555403411 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.h
+1555404982 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.h
 	"sommet.h"
 	"arretes.h"
 	"combinaison.h"
 
-1555348838 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.h
+1555409206 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.h
 	"arretes.h"
 
 1555348838 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\arretes.h
@@ -20,20 +20,24 @@
 1555348838 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\arretes.cpp
 	"arretes.h"
 
-1555402869 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.cpp
+1555409980 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\graphe.cpp
 	<fstream>
 	<iostream>
 	"graphe.h"
+	"../outils.h"
+	<queue>
 
-1555347798 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.cpp
+1555407147 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\sommet.cpp
 	<unordered_map>
 	<unordered_set>
 	"sommet.h"
 
-1555403329 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\combinaison.h
+1555404982 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\combinaison.h
 
 1555403176 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\objet\combinaison.cpp
 
 1555399438 source:c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\outils.cpp
 	<iostream>
+
+1555398874 c:\users\lsoar\onedrive\ece paris 2018-2019\informatique s4 ing2\projet\projetpiscine\std\outils.h
 

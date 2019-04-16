@@ -16,12 +16,15 @@ class Sommet
         std::vector<Arete*> getAretes()const{
             return m_aretes;
         };
+        void ajouterVoisin(std::string voisin); ///Principe du TP3
+        std::vector<std::string> getVoisins() {return m_voisins;}
 
     private:
         /// Données spécifiques du sommet
         std::string m_id; // Identifiant
         double m_x, m_y; // Position
         std::vector<Arete*> m_aretes;
+        std::vector<std::string> m_voisins;
 };
 
 #endif // SOMMET_H_INCLUDED
