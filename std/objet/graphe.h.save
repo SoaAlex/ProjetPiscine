@@ -3,6 +3,10 @@
 
 #include "sommet.h"
 #include "arretes.h"
+<<<<<<< HEAD
+=======
+#include "combinaison.h"
+>>>>>>> ft_mikael
 
 class Graphe
 {
@@ -10,8 +14,17 @@ class Graphe
         ///constructeur qui charge le graphe en mémoire
         Graphe(std::string ficTopologie, std::string ficPonderations);
         ~Graphe();
+<<<<<<< HEAD
         //void affichage();
         void testAfficher();
+=======
+        void testAfficher();
+        
+        ///Prim
+        Combinaison_Prim();
+        ///Double pondération
+        std::unordered_set<Combinaison*> doublePonderation();
+>>>>>>> ft_mikael
 
     protected:
         /// Le réseau est constitué d'une collection de sommets

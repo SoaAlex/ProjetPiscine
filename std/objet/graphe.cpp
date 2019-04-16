@@ -1,6 +1,8 @@
 #include <fstream>
 #include <iostream>
 #include "graphe.h"
+#include "../outils.h"
+#include <queue>
 
 Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (adapté)
     ///Ouverture FICHIER TOPOLOGIE/////////////////////////////////
@@ -39,6 +41,8 @@ Graphe::Graphe(std::string ficTopologie, std::string ficPoids){ ///CODE TP2/3 (a
         m_sommets.find(ID_s1)->second->setArete(arete);
         m_sommets.find(ID_s2)->second->setArete(arete);
         m_aretes.insert({id,arete});
+        m_sommets.find(ID_s1)->second->ajouterVoisin(ID_s2);
+        m_sommets.find(ID_s2)->second->ajouterVoisin(ID_s1);
     }
 
 
@@ -87,4 +91,113 @@ void Graphe::testAfficher()
 Graphe::~Graphe()
 {
     //dtor
+}
+
+///MIKAEL
+///Prim
+Combinaison Graphe::Prim()
+{
+    Combinaison solPrim = {m_aretes, 0, 0, false};
+
+}
+
+///Double Pondération
+std::unordered_set<Combinaison*> Graphe::doublePonderation()
+{
+    ///Création tableau de combinaisons
+    std::unordered_set<Combinaison*> sousGraphes;///Tableau des combinaisons
+
+    ///Création des combinaisons
+    int binaire[m_aretes.size()] = {0};///Tableau : nombre binaire
+    int nbr_comb = 2^m_aretes.size();///2^(nbr d'arête) = nbr de combinaisons
+
+    std::unordered_map<std::string,Sommet*> sommets = m_sommets;///Tableau des sommets des combinaisons
+    std::unordered_map<std::string,Arete*> aretes;///Tableau des arêtes (route cyclables) des combinaisons
+    float coutTotalFinancier = 0;
+    float coutTotalEnvironnement = 0;
+    bool elimine = false;///Dominée ou non dominée (diagramme de Pareto)
+
+    for(int i = 0; i < nbr_comb; ++i)
+    {
+        ///1ère étape
+            ///Compteur binaire
+        convertisseur_binaire(binaire, nbr_comb, m_aretes.size());
+        int compteur = 0;
+        for(const auto ar: m_aretes)
+        {
+            if(binaire[compteur] == 1)
+            {
+                aretes.insert(ar);
+            }
+            compteur = compteur + 1;
+        }
+        ///Création de la combinaison
+        sousGraphes.insert(new Combinaison{aretes, coutTotalFinancier, coutTotalEnvironnement, elimine});
+        ///Variables BFS
+        std::queue<Sommet*> file;
+        std::unordered_set<Sommet*> marquage;
+        Sommet* sommetActuel;
+
+        ///2ème étape
+        for(const auto comb: sousGraphes)
+        {
+            ///Compter nombre d'arêtes (doit être égal à n-1, n : sommets)
+            if(comb->getAretes().size() != (m_sommets.size() - 1))
+            {
+                sousGraphes.erase(comb);
+            }
+            ///Vérifier connexité (BFS)
+            else
+            {
+                std::string s0 = "0"; //Commence au sommet 0 arbitrairement
+                sommetActuel = m_sommets.find(s0)->second;
+                marquage.insert(sommetActuel);
+                file.push(sommetActuel);
+
+                do{
+                    sommetActuel = file.front();
+                    file.pop();
+                    for(auto suc: sommetActuel->getVoisins() ){
+                        if(marquage.find(m_sommets.find(suc)->second) == marquage.end()){
+                            file.push(m_sommets.find(suc)->second);
+                            marquage.insert(m_sommets.find(suc)->second);
+                        }
+                    }
+                }while(!file.empty());
+                if(marquage.size() != m_sommets.size()){///Si non connexe
+                    sousGraphes.erase(comb);
+                }
+            }
+        }
+
+        ///3ème étape
+            ///Calcul des coûts totaux
+        for(const auto comb: sousGraphes)
+        {
+            for(const auto ar: comb->getAretes())
+            {
+                comb->calculFinancier(ar.second->getCoutFinancier());
+                comb->calculEnvironnement(ar.second->getCoutEnvironnement());
+            }
+        }
+            ///Elimination des combinaisons dominées
+        for(const auto comb1: sousGraphes)
+        {
+            if(comb1->getElimine() == false)
+            {
+                for(const auto comb2: sousGraphes)
+                {
+                    if(comb1 != comb2)
+                    {
+                        if((comb1->getTotFinancier() <= comb2->getTotFinancier()) && (comb1->getTotEnvironnement() <= comb2->getTotEnvironnement()))
+                        {
+                            comb2->setElimine(true);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return(sousGraphes);
 }

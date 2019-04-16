@@ -15,3 +15,8 @@ Sommet::~Sommet()
 {
     //dtor
 }
+
+void Sommet::ajouterVoisin(std::string voisin)
+{
+    m_voisins.push_back(voisin);
+}

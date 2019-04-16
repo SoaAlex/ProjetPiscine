@@ -15,3 +15,11 @@ Sommet::~Sommet()
 {
     //dtor
 }
+<<<<<<< HEAD
+=======
+
+void ajouterVoisin(const Sommet* voisin)
+{
+    m_voisins.push_back(voisin)
+}
+>>>>>>> ft_mikael
