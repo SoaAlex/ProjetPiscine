@@ -8,10 +8,9 @@ class Graphe
 {
     public:
         ///constructeur qui charge le graphe en mémoire
-        Graphe(std::string);
-        void affichage();
         Graphe(std::string ficTopologie, std::string ficPonderations);
         ~Graphe();
+        //void affichage();
         void testAfficher();
 
     protected:
@@ -19,7 +18,5 @@ class Graphe
         std::unordered_map<std::string,Sommet*> m_sommets;//stockée dans une map (clé=id du sommet, valeur= pointeur sur le sommet)
         std::unordered_map<std::string, Arete*> m_aretes;
 };
-
-//class Combinaison :
 
 #endif // GRAPHE_H_INCLUDED

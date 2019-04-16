@@ -72,10 +72,15 @@ void Graphe::testAfficher()
     for(const auto s: m_sommets){
         std::cout<< s.second->getID() << std::endl;
     }
-    
+
     std::cout << "ARETES: " << std::endl;
     for(const auto s: m_aretes){
-        std::cout<< s.second->getID() << "  " << s.second->getS1() <<std::endl;
+        std::cout<< s.second->getID() << "  " << s.second->getS1() << "  " << s.second->getS2() << std::endl;
+    }
+    
+    std::cout << "POIDS ARETES" << std::endl;
+    for(const auto s: m_aretes){
+        std::cout << s.getCo
     }
 }
 

@@ -77,6 +77,11 @@ void Graphe::testAfficher()
     for(const auto s: m_aretes){
         std::cout<< s.second->getID() << "  " << s.second->getS1() << "  " << s.second->getS2() << std::endl;
     }
+
+    std::cout << "POIDS ARETES" << std::endl;
+    for(const auto s: m_aretes){
+        std::cout << "SOMMET: " << s.first << " CF: " << s.second->getCoutFinancier() << " CE: " << s.second->getCoutEnvironnement() << std::endl;
+    }
 }
 
 Graphe::~Graphe()
