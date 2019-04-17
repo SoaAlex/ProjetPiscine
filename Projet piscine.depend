@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1555497236 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\main.cpp
+	"std/objet/graphe.h"
+
+1555497209 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\graphe.cpp
+	"graphe.h"
+	<queue>
+
+1555494827 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\graphe.h
+	"sommet.h"
+	"combinaison.h"
+	"../outils.h"
+
+1555493242 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\sommet.h
+	"arete.h"
+
+1555492269 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\arete.h
+	"../svg/svgfile.h"
+
+1555447134 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\svg\svgfile.h
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+	<unordered_map>
+	<map>
+	<set>
+	<unordered_set>
+	<vector>
+
+1555496686 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\arete.cpp
+	"arete.h"
+
+1555447056 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\svg\svgfile.cpp
+	<iostream>
+	<sstream>
+
+1555492561 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\sommet.cpp
+	"sommet.h"
+
+1555494693 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\combinaison.h
+	"arete.h"
+
+1555486634 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\outils.h
+
+1555494804 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\combinaison.cpp
+	"combinaison.h"
+
+1555486702 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\outils.cpp
+	<iostream>
+
