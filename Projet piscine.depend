@@ -1,0 +1,103 @@
+# depslib dependency file v1.0
+1555507670 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\main.cpp
+	"std/objet/graphe.h"
+
+1555508071 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\graphe.cpp
+	"graphe.h"
+	<queue>
+
+1555507486 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\graphe.h
+	"sommet.h"
+	"combinaison.h"
+	"../outils.h"
+
+1555493242 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\sommet.h
+	"arete.h"
+
+1555492269 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\arete.h
+	"../svg/svgfile.h"
+
+1555506692 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\svg\svgfile.h
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+	<unordered_map>
+	<map>
+	<set>
+	<unordered_set>
+	<vector>
+
+1555498972 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\arete.cpp
+	"arete.h"
+
+1555508667 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\svg\svgfile.cpp
+	<iostream>
+	<sstream>
+
+1555508721 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\sommet.cpp
+	"sommet.h"
+
+1555507884 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\combinaison.h
+	"arete.h"
+
+1555507387 c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\outils.h
+
+1555508530 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\objet\combinaison.cpp
+	"combinaison.h"
+
+1555507336 source:c:\users\alexi\onedrive\bureau\projet piscine\projet piscine\std\outils.cpp
+	<iostream>
+	"objet/combinaison.h"
+
+1555507672 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\main.cpp
+	"std/objet/graphe.h"
+
+1555507488 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\graphe.h
+	"sommet.h"
+	"combinaison.h"
+	"../outils.h"
+
+1555493244 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\sommet.h
+	"arete.h"
+
+1555492270 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\arete.h
+	"../svg/svgfile.h"
+
+1555506694 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\svg\svgfile.h
+	<string>
+	<vector>
+	<iostream>
+	<fstream>
+	<unordered_map>
+	<map>
+	<set>
+	<unordered_set>
+	<vector>
+
+1555507886 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\combinaison.h
+	"arete.h"
+
+1555507388 d:\_pro\2_second semestre\projet informatique\projetpiscine\std\outils.h
+
+1555498974 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\arete.cpp
+	"arete.h"
+
+1555511013 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\combinaison.cpp
+	"combinaison.h"
+
+1555508722 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\sommet.cpp
+	"sommet.h"
+
+1555507338 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\outils.cpp
+	<iostream>
+	"objet/combinaison.h"
+
+1555508668 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\svg\svgfile.cpp
+	<iostream>
+	<sstream>
+
+1555511217 source:d:\_pro\2_second semestre\projet informatique\projetpiscine\std\objet\graphe.cpp
+	"graphe.h"
+	<queue>
+
